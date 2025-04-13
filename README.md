@@ -1,31 +1,30 @@
-# tlpsharedmemorygem5
 # gem5 Simulation: MinorCPU with Multi-threaded DAXPY
 
 This project demonstrates a shared-memory simulation using gem5's `MinorCPU` and analyzes thread-level parallelism through a multi-threaded DAXPY kernel.
 
 ---
 
-## 📁 Project Structure
+Project Structure
 
 gem5/ 
-# gem5 source directory ├── build/X86/gem5.opt 
-# gem5 binary (compiled for X86) 
+gem5 source directory ├── build/X86/gem5.opt 
+gem5 binary (compiled for X86) 
 ├── configs/ 
 │ └── learning_gem5/ 
 │ └── part1/ 
 │ └── simple.py 
 
-# Main config file for simulation ├── m5out/ 
-# Output directory for gem5 results newcode/ ├── daxpy_threaded.cpp 
-# Multi-threaded DAXPY C++ code ├── daxpy_threaded 
-# Compiled binary (for X86) ├── BasicMinorCPU_1.py 
-# Script with modified FU parameters
+Main config file for simulation ├── m5out/ 
+Output directory for gem5 results newcode/ ├── daxpy_threaded.cpp 
+Multi-threaded DAXPY C++ code ├── daxpy_threaded 
+Compiled binary (for X86) ├── BasicMinorCPU_1.py 
+Script with modified FU parameters
 
 yaml
 
 ---
 
-## 🔧 Requirements
+## Requirements
 
 - gem5 v23.0.0.1 or compatible
 - Python 3.x
