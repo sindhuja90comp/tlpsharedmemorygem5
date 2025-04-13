@@ -7,11 +7,17 @@ This project demonstrates a shared-memory simulation using gem5's `MinorCPU` and
 Project Structure
 
 gem5/ 
+
 gem5 source directory ├── build/X86/gem5.opt 
+
 gem5 binary (compiled for X86) 
+
 ├── configs/ 
+
 │ └── learning_gem5/ 
+
 │ └── part1/ 
+
 │ └── simple.py 
 
 Main config file for simulation ├── m5out/ 
@@ -37,7 +43,7 @@ python3 -m venv venv
 source venv/bin/activate
 pip install pydot
 
-⚙️ Compilation Steps
+Compilation Steps
 1. Build gem5
 From the gem5/ directory:
 scons build/X86/gem5.opt -j$(nproc)
@@ -48,7 +54,7 @@ cd ~/newcode
 g++ daxpy_threaded.cpp -o daxpy_threaded
 Make sure this binary is specified in the simulation script.
 
-▶️ Run Simulation
+Run Simulation
 From the gem5/ directory:
 
 build/X86/gem5.opt configs/learning_gem5/part1/simple.py \
@@ -58,7 +64,7 @@ build/X86/gem5.opt configs/learning_gem5/part1/simple.py \
   --script=newcode/BasicMinorCPU_1.py
 Ensure the path to BasicMinorCPU_1.py is correct.
 
-📊 Output
+Output
 Simulation output will be stored in m5out/. Key files include:
 
 stats.txt — Performance statistics
@@ -69,7 +75,7 @@ config.dot — System graph (requires pydot)
 
 Terminal log — Simulation progress and debug messages
 
-📝 Notes
+Notes
 The warning DRAM device capacity... is expected if memory sizes mismatch but doesn’t break simulation.
 
 The message Exiting @ tick... means the simulation completed execution.
