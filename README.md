@@ -90,6 +90,3 @@ Simulation output will be stored in `m5out/`. Key files include:
 - The warning `DRAM device capacity...` is expected if memory sizes mismatch but doesn’t break the simulation.
 - The message `Exiting @ tick...` means the simulation completed execution.
 
----
-
-This version is formatted for readability, with clear sections, code blocks, and descriptions. Let me know if you need further adjustments!
